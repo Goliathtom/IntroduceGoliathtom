@@ -18,3 +18,22 @@ html,body{
 
     min-height:100%; /* real browsers */
 }
+#main{
+	background: url("../img/main_bg.jpg");
+	background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-repeat: no-repeat;
+	-ms-background-repeat: no-repeat;
+	-o-background-repeat: no-repeat;
+}
+#main-content h1{
+	font-size: 30px;
+	color: #fff;
+}
+#main-content h2{
+	font-size: 26px;
+	color: #fff;
+}
