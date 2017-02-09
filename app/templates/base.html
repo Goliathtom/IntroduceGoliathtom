@@ -1,0 +1,73 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} JK Portfolio  {% endblock %}
+{% block head %}
+{{super()}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {% block styles %}
+  {{super()}}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/setting.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  {% endblock %}
+{% endblock %}
+
+{% block navbar %}
+<div id="head_container">
+    <nav class="col-xs-12 navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="menu-icon">메뉴</span>
+          </button>
+          <div class="inline-content">
+            <a class="navbar-brand" href="/">
+            </a>
+            <p>전화 주문 1800-0199</p>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li id='nav-home'><a href="/">HOME</a></li>
+            <li id='nav-about'><a href="/">ABOUT</a></li>
+            <li id='nav-skill'><a href="/">SKILL</a></li>
+            <li id='nav-exp'><a href="/">EXP</a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+  </div>
+{% endblock %}
+
+{% block content %}
+<!-- End Channel Plugin -->
+<div class="container-fluid">
+
+  {% block page_content %} {% endblock %}
+<!--Footer-->
+  <footer id="footer">
+    <div class="col-xs-12">
+        <!-- SNS -->
+        <div class="inline-content">
+            <div class="footer_sns">
+              <a href="https://www.facebook.com/banzzackbanzzack/" target="_blank"><img src="../static/img/footer-fb.png" onmouseover="this.src='../static/img/footer-fb-h.png'" onmouseout="this.src='../static/img/footer-fb.png'" alt="Facebook"></a>
+            </div>
+            <div class="footer_sns">
+              <a href="http://blog.naver.com/homemaster0000" target="_blank"><img src="../static/img/footer-naver.png" onmouseover="this.src='../static/img/footer-naver-h.png'" onmouseout="this.src='../static/img/footer-naver.png'" alt="Naver"></a>
+            </div>
+            <div class="footer_sns">
+              <a href="https://www.instagram.com/homemaster_official/" target="_blank"><img src="../static/img/footer-insta.png" onmouseover="this.src='../static/img/footer-insta-h.png'" onmouseout="this.src='../static/img/footer-insta.png'" alt="Instagram"></a>
+            </div>
+            <div class="footer_sns">
+              <a href="https://www.youtube.com/channel/UCVczqJlYN51O6rG1TXESr1g" target="_blank"><img src="../static/img/footer-youtube.png" onmouseover="this.src='../static/img/footer-youtube-h.png'" onmouseout="this.src='../static/img/footer-youtube.png'" alt="Youtube"></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+{% endblock %}
+{% block scripts %}
+{{super()}}
+{% endblock %}
+
