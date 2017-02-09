@@ -9,7 +9,7 @@ import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
 import del from 'del';
 
-gulp.task('default', ['clean', 'js', 'css', 'html', 'images'], () => {
+gulp.task('default', ['clean', 'js', 'css', 'html', 'images', 'py'], () => {
 	return gutil.log('Gulp is running');
 });
 
@@ -24,14 +24,16 @@ const SRC = {
 	JS: DIR.SRC + '/static/js/*.js',
 	CSS: DIR.SRC + '/static/css/*.css',
 	HTML: DIR.SRC + '/templates/*.html',
-	IMAGES: DIR.SRC + '/static/images/*'
+	IMAGES: DIR.SRC + '/static/images/*',
+	PY: DIR.SRC + '/views/*.py'
 };
 
 const DEST = {
 	JS: DIR.DEST + '/static/js',
 	CSS: DIR.DEST + '/static/css',
 	HTML: DIR.DEST + '/templates/',
-	IMAGES: DIR.DEST + '/static/images'
+	IMAGES: DIR.DEST + '/static/images',
+	PY: DIR.DEST + '/views/'
 };
 
 /* minify javascript */
@@ -66,6 +68,11 @@ gulp.task('images', () => {
 /* CLEAN - Delect all files in 'dist' folder*/
 gulp.task('clean', () => {
 	return del.sync([DIR.DEST]);
+});
+
+gulp.task('py', () => {
+	return gulp.src(SRC.PY)
+			.pipe(gulp.dest(DEST.PY));
 });
 
 

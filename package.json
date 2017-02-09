@@ -28,5 +28,13 @@
     "semantic-ui-css": "^2.2.4",
     "semantic-ui-react": "^0.63.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goliathtom/IntroduceGoliathtom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Goliathtom/IntroduceGoliathtom/issues"
+  },
+  "homepage": "https://github.com/Goliathtom/IntroduceGoliathtom#readme",
   "description": ""
 }

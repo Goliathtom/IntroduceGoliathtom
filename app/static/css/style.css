@@ -1,0 +1,20 @@
+html,body{
+	height:100%; /* needed for container min-height */
+}
+#head_container >nav{
+	background-color: #000;
+}
+.navbar-fixed-top{
+	border-width: 0;
+}
+.section-item{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position:relative; /* needed for footer positioning*/
+    margin:0 auto; /* center, not in IE5 */
+    background:#f0f0f0;
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+
+    min-height:100%; /* real browsers */
+}

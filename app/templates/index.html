@@ -1,9 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %} JK Portfolio  {% endblock %}
 
-</body>
-</html>
+{% block styles %}
+{{super()}}
+
+{% endblock styles %}
+
+{% block page_content %}
+<!-- Main Section -->
+<section id="main" class="container-fluid section-item">
+	<h1>Test Page Landing Success</h1>
+</section>
+<section id="about" class="container-fluid section-item">
+	<h1>Test Page Landing Success2222</h1>
+</section>
+{% endblock page_content %}
+
+{% block scripts %}
+{{super()}}
+{% endblock %}
+
