@@ -24,7 +24,7 @@ const SRC = {
 	JS: DIR.SRC + '/static/js/*.js',
 	CSS: DIR.SRC + '/static/css/*.css',
 	HTML: DIR.SRC + '/templates/*.html',
-	IMAGES: DIR.SRC + '/static/images/*',
+	IMAGES: [DIR.SRC + '/static/img/*.png', DIR.SRC + '/static/img/*.jpg', DIR.SRC + '/static/img/*.svg'],
 	PY: DIR.SRC + '/views/*.py'
 };
 
@@ -32,7 +32,7 @@ const DEST = {
 	JS: DIR.DEST + '/static/js',
 	CSS: DIR.DEST + '/static/css',
 	HTML: DIR.DEST + '/templates/',
-	IMAGES: DIR.DEST + '/static/images',
+	IMAGES: DIR.DEST + '/static/img',
 	PY: DIR.DEST + '/views/'
 };
 
