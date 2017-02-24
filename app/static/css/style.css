@@ -54,7 +54,6 @@ label{
     background:#f0f0f0;
     height:auto !important; /* real browsers */
     height:100%; /* IE6: treaded as min-height*/
-
     min-height:100%; /* real browsers */
 }
 #main{
@@ -108,6 +107,9 @@ label{
     margin: 10px 0px;
     margin-right: 10px;
 }
+.footer_sns a img{
+	border-radius: 40px;
+}
 #skill{
 	background-color: #fff;
 }
@@ -132,6 +134,9 @@ label{
     transition: all ease .5s;
     -webkit-transition: all ease .5s;
     -ms-transition: all ease .5s;
+}
+.proj-item .proj-link img{
+	height: 160px;
 }
 #proj .proj-item .proj-link .caption:hover{
 	opacity: 1;
@@ -187,5 +192,34 @@ label{
 	margin: 0 0 5px;
 }
 @media (max-width: 767px) {
-
+	h1{
+		font-size: 40px;
+	}
+	h2{
+		font-size: 26px;
+	}
+	h3{
+		font-size: 20px;
+	}
+	h4,
+	label{
+		font-size: 14px;
+	}
+	.proj-item .proj-link img{
+		height: 240px;
+	}
+/*	.proj-modal .modal-content{
+		padding: 15px 0;
+	}
+	.proj-modal .close-modal{
+		width: 30px;
+		height: 30px;
+	}
+	.proj-modal .close-modal .lr{
+		height: 30px;
+		margin-left: 10px
+	}
+	.proj-modal .close-modal .lr .rl{
+		height: 30px;
+	}*/
 }

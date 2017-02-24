@@ -3,9 +3,17 @@
 {% block head %}
 {{super()}}
   <meta charset="utf-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="기쁨을 만들고, 나누고 싶은 웹개발자입니다. :))">
+  <meta name="keywords" content="웹개발자, 프론트엔드개발자, web-developer, front-end developer">
+  <meta property="og:type" content="website">
+  <meta name="og:title" content="JK Portfolio">
+  <meta property="og:description" content="기쁨을 만들고, 나누고 싶은 웹개발자입니다. :))">
+  <meta property="og:image" content="https://goliathtom11.pythonanywhere.com/static/img/main_bg.jpg">
+  <meta property="og:url" content="https://goliathtom11.pythonanywhere.com/">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/setting.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo30X30.jpg') }}">
 {% endblock head %}
 
 {% block navbar %}

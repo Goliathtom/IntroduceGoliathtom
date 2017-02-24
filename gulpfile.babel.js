@@ -9,7 +9,7 @@ import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
 import del from 'del';
 
-gulp.task('default', ['clean', 'js', 'css', 'html', 'images', 'py'], () => {
+gulp.task('default', ['clean', 'js', 'css', 'html', 'images', 'py-init', 'py'], () => {
 	return gutil.log('Gulp is running');
 });
 
@@ -25,7 +25,8 @@ const SRC = {
 	CSS: DIR.SRC + '/static/css/*.css',
 	HTML: DIR.SRC + '/templates/*.html',
 	IMAGES: [DIR.SRC + '/static/img/*.png', DIR.SRC + '/static/img/*.jpg', DIR.SRC + '/static/img/*.svg'],
-	PY: DIR.SRC + '/views/*.py'
+	PY_INIT : DIR.SRC+ '/*.py',
+	PY: [DIR.SRC + '/views/*.py', DIR.SRC + '/views/**/*.py']
 };
 
 const DEST = {
@@ -33,14 +34,15 @@ const DEST = {
 	CSS: DIR.DEST + '/static/css',
 	HTML: DIR.DEST + '/templates/',
 	IMAGES: DIR.DEST + '/static/img',
-	PY: DIR.DEST + '/views/'
+	PY_INIT: DIR.DEST + '/',
+	PY:  DIR.DEST+ '/views'
 };
 
 /* minify javascript */
 gulp.task('js', () => {
 	return gulp.src(SRC.JS)
-			.pipe(concat('all.min.js'))
-			.pipe(uglify('all.min.js'))
+			.pipe(concat('index.js'))
+			.pipe(uglify('index.js'))
 			.pipe(gulp.dest(DEST.JS));
 });
 
@@ -68,6 +70,11 @@ gulp.task('images', () => {
 /* CLEAN - Delect all files in 'dist' folder*/
 gulp.task('clean', () => {
 	return del.sync([DIR.DEST]);
+});
+
+gulp.task('py-init', () => {
+	return gulp.src(SRC.PY_INIT)
+			.pipe(gulp.dest(DEST.PY_INIT));
 });
 
 gulp.task('py', () => {
